@@ -1,6 +1,4 @@
 # hal_lineage_fastcharge_default.te
-
-type vendor_sysfs_battery_supply, sysfs_type, fs_type;
 allow hal_lineage_fastcharge vendor_sysfs_battery_supply:file rw_file_perms;
 
 get_prop(hal_lineage_fastcharge, sec_fastcharge_prop)
