@@ -90,17 +90,10 @@ ODM_MANIFEST_FILES += $(COMMON_PATH)/configs/hidl/manifest-qva.xml
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-#BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_KERNEL_SEPARATED_DTBO := true
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
-
-BOARD_PREBUILT_DTBOIMAGE := $(COMMON_PATH)/prebuilts/dtbo.img
-TARGET_PREBUILT_KERNEL := $(COMMON_PATH)/prebuilts/Image.gz-dtb
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_HEADERS := kernel/xiaomi/sm6150
-TARGET_FORCE_PREBUILT_KERNEL := true
-
-#TARGET_KERNEL_CONFIG := davinci_defconfig
+TARGET_KERNEL_CONFIG := davinci_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x880000
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
