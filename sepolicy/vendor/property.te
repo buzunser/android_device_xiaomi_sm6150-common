@@ -1,2 +1,4 @@
 # Fastcharge HAL
 type sec_fastcharge_prop, property_type;
+
+vendor_internal_prop(vendor_thermal_normal_prop)
