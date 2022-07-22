@@ -10,6 +10,3 @@ r_dir_file(hal_camera_default, mnt_vendor_file)
 
 allow hal_camera_default remosaic_daemon_service:service_manager find;
 binder_call(hal_camera_default, remosaic_daemon)
-
-# Allow hal_camera_default to read fastrpc_shell_3
-allow hal_camera_default public_adsprpcd_file:file r_file_perms;
